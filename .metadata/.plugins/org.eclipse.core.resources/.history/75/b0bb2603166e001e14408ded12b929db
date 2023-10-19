@@ -1,0 +1,22 @@
+package projeto.demo;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import projeto.demo.app.Conversor;
+
+@SpringBootApplication
+public class DemoApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(DemoApplication.class, args);
+	}
+	public CommandLineRunner run(Conversor conversor) throw Exception{
+		return args -> {
+			String json = "{\"cep\": \"01001-000\",\"logradouro\": \"Praça da Sé\",\"localidade\": \"São Paulo\"}";
+			ViaCepResponse response = conversor.converter(json);
+			System.out.println("Dados do CEP: " + response);
+		};
+	}
+
+}

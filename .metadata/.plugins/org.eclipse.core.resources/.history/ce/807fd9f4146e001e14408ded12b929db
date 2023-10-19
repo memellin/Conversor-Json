@@ -1,0 +1,8 @@
+package projeto.demo.app;
+
+import com.google.gson.Gson;
+
+public class Conversor {
+	
+	private Gson gson = new Gson();
+}

@@ -1,0 +1,7 @@
+package projeto.demo;
+
+import org.springframework.boot.CommandLineRunner;
+
+public class MyApp implements CommandLineRunner{
+
+}
